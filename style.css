@@ -54,6 +54,15 @@ input {
     color: black;
 }
 
+
+footer{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 3px 0 3px;
+    /* text-align:center; */
+}
+
 /* access from script.js */
 
 .li-style{
@@ -91,7 +100,7 @@ input {
 
 /* media queries */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1440px) {
     .submit-btn{
         margin-top: 7px;
     }

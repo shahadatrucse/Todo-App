@@ -1,14 +1,11 @@
 //find all elements
-const container = document.querySelector(".container");
 const todoForm = document.querySelector(".todo-form");
 const todoInput = document.querySelector("#inputTodo");
-const todoAddButton = document.querySelector("#addTodoButton");
 const todoLists = document.getElementById("lists");
 const message = document.getElementById("message");
 
 
 //showmessage
-
 const showMessage = (text, status) =>{
     if(status == 'danger'){
         message.innerHTML= text;
@@ -26,10 +23,9 @@ const showMessage = (text, status) =>{
             message.classList.remove(`bg-${status}`);
         }, 2000);
     }
-
 }
 
-
+//deletetodo
 const deleteTodo = (event) =>{
     const selectedTodo = event.target.parentElement.parentElement.parentElement;
     console.log(selectedTodo);
@@ -42,10 +38,8 @@ const deleteTodo = (event) =>{
     tempTodos = tempTodos.filter((todo) => todo.todoId != selectedTodo.id);
     console.log(tempTodos);
     localStorage.setItem("myTodos", JSON.stringify(tempTodos));
-
-
-
 }
+
 
 //createTodo
 const createTodo = (todoId, todoValue) =>{
@@ -64,10 +58,12 @@ const createTodo = (todoId, todoValue) =>{
 }
 
 
+//get todos from local storage
 const getTodosFromLocalStorage = () =>{
    return localStorage.getItem("myTodos") ?
     JSON.parse(localStorage.getItem("myTodos")) : [];
 }
+
 
 //addTodo
 const addTodo = (event) =>{
@@ -89,10 +85,12 @@ const addTodo = (event) =>{
     localStorage.setItem("myTodos", JSON.stringify(todos));
 
     todoInput.value="";
-    
+
 
 };
 
+
+//initially loaded todos 
 const loadTodos = () =>{
     let tempTodos = getTodosFromLocalStorage();
     tempTodos.map((todo) => createTodo(todo.todoId, todo.todoValue));
