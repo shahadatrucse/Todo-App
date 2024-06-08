@@ -1,0 +1,91 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    height: 100vh;
+}
+
+.card{
+    background-color: #222;
+    color: white;
+    padding:  1rem;
+    height: 80vh;
+    border-radius: 0.6rem;
+    width: 50%;
+    overflow: auto;
+}
+
+.card-title{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.card-title h2{
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+input {
+    border: none;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+    width: 86%;
+}
+
+.submit-btn {
+    border: none;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+    background-color: orange;
+    color: white;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background-color: white;
+    color: black;
+}
+
+/* access from script.js */
+
+.li-style{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 5px;
+    background-color: #333;
+    padding: .3rem;
+    border-radius: 0.6rem;
+    margin: 0.5rem 0;
+    transition: all 0.3s;
+    margin-left: -40px;
+}
+
+.li-style:hover{
+    background-color: #111;
+}
+
+.bg-success{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    color: black;
+    background-color: #ddffdd;
+    border-left: 6px solid #04aa6d;
+}
+
+.bg-danger{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    color: black;
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+}
+
