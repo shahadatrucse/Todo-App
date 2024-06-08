@@ -89,6 +89,7 @@ const addTodo = (event) =>{
     localStorage.setItem("myTodos", JSON.stringify(todos));
 
     todoInput.value="";
+    
 
 };
 
